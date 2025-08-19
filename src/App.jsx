@@ -5,7 +5,7 @@ import WorkShowcase from "./components/WorkShowcase";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Analytics from "./components/Analytics";
-
+import "./App.css"
 function App() {
   return (
     <>

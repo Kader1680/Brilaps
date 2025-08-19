@@ -46,11 +46,10 @@ const projects = [
   },
   {
     title: "Qatar Building Company",
-        image: "./qatars.png",
+    image: "./qatars.png",
     link: "https://qbc.qa/",
     description: "Designed modern UI for ecommerce business growth.",
   },
-    
 ];
 
 export default function WorkShowcase() {
@@ -68,52 +67,90 @@ export default function WorkShowcase() {
   );
 
   return (
-    <Container id="work" sx={{ py: 10 }}>
-      <Typography variant="h4" align="center" gutterBottom>
-        My Work
-      </Typography>
+    <Box id="work" sx={{ py: 10, bgcolor: "#101010", color: "white" }}>
+      <Container>
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+          sx={{ color: "#ec7578", fontWeight: "bold" }}
+        >
+          My Work
+        </Typography>
 
-      {/* Grid */}
-      <Grid container spacing={4} justifyContent="center">
-        {paginatedProjects.map((proj, i) => (
-          <Grid item xs={12} sm={6} md={4} key={i}>
-            <Card sx={{ boxShadow: 3, borderRadius: 3 }}>
-              <CardMedia
-                component="img"
-                height="200"
-                image={proj.image}
-                alt={proj.title}
-              />
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  {proj.title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" gutterBottom>
-                  {proj.description}
-                </Typography>
-                <Button
-                  variant="outlined"
-                  href={proj.link}
-                  target="_blank"
-                  sx={{ mt: 1 }}
-                >
-                  Visit Site
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
- 
-      <Box display="flex" justifyContent="center" mt={4}>
-        <Pagination
-          count={count}
-          page={page}
-          onChange={handleChange}
-          color="primary"
-          size="large"
-        />
-      </Box>
-    </Container>
+        {/* Grid */}
+        <Grid container spacing={4} justifyContent="center">
+          {paginatedProjects.map((proj, i) => (
+            <Grid item xs={12} sm={6} md={4} key={i}>
+              <Card
+                sx={{
+                  boxShadow: 4,
+                  borderRadius: 3,
+                  bgcolor: "#1a1a1a",
+                  border: "1px solid #2a2a2a",
+                  transition: "0.3s",
+                  "&:hover": {
+                    transform: "translateY(-6px)",
+                    borderColor: "#ec7578",
+                  },
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={proj.image}
+                  alt={proj.title}
+                />
+                <CardContent>
+                  <Typography variant="h6" gutterBottom sx={{ color: "#7794e5" }}>
+                    {proj.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#9e89c0", mb: 2 }}
+                  >
+                    {proj.description}
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    href={proj.link}
+                    target="_blank"
+                    sx={{
+                      mt: 1,
+                      backgroundColor: "#ec7578",
+                      "&:hover": {
+                        backgroundColor: "#c57f9c",
+                      },
+                    }}
+                  >
+                    Visit Site
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Pagination */}
+        <Box display="flex" justifyContent="center" mt={4}>
+          <Pagination
+            count={count}
+            page={page}
+            onChange={handleChange}
+            color="primary"
+            size="large"
+            sx={{
+              "& .MuiPaginationItem-root": {
+                color: "#ec7578",
+              },
+              "& .Mui-selected": {
+                backgroundColor: "#ec7578 !important",
+                color: "white !important",
+              },
+            }}
+          />
+        </Box>
+      </Container>
+    </Box>
   );
 }
