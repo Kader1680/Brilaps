@@ -1,5 +1,5 @@
 import { Container, Typography, Grid, Button } from "@mui/material";
-import { Email, WhatsApp, Twitter, Work } from "@mui/icons-material";
+import { Email, WhatsApp, Twitter, Work, Facebook } from "@mui/icons-material";
 
 export default function Contact() {
   return (
@@ -18,6 +18,7 @@ export default function Contact() {
       </Typography>
 
       <Grid container spacing={3} justifyContent="center">
+        {/* Email */}
         <Grid item>
           <Button
             variant="contained"
@@ -35,12 +36,13 @@ export default function Contact() {
           </Button>
         </Grid>
 
+        {/* WhatsApp */}
         <Grid item>
           <Button
             variant="contained"
             startIcon={<WhatsApp />}
-               href="https://wa.me/+213549891600"
-              target="_blank"
+            href="https://wa.me/+213549891600"
+            target="_blank"
             sx={{
               bgcolor: "#7794e5",
               "&:hover": { bgcolor: "#9e89c0" },
@@ -53,6 +55,7 @@ export default function Contact() {
           </Button>
         </Grid>
 
+        {/* Fiverr */}
         <Grid item>
           <Button
             variant="contained"
@@ -71,6 +74,7 @@ export default function Contact() {
           </Button>
         </Grid>
 
+        {/* Twitter */}
         <Grid item>
           <Button
             variant="contained"
@@ -86,6 +90,25 @@ export default function Contact() {
             }}
           >
             Twitter
+          </Button>
+        </Grid>
+
+        {/* Facebook */}
+        <Grid item>
+          <Button
+            variant="contained"
+            startIcon={<Facebook />}
+            href="https://web.facebook.com/profile.php?id=61575335054762"
+            target="_blank"
+            sx={{
+              bgcolor: "#4267B2",
+              "&:hover": { bgcolor: "#365899" },
+              px: 3,
+              py: 1.2,
+              borderRadius: "12px",
+            }}
+          >
+            Facebook
           </Button>
         </Grid>
       </Grid>
