@@ -21,7 +21,7 @@ export default function Analytics() {
   ];
 
   return (
-    <section className="py-16 bg-[#101010] text-white">
+    <section className="py-16   text-black">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-4 text-[#ec7578]">Our Achievements</h2>
         <p className="mb-12 text-[#9e89c0]">
@@ -32,11 +32,11 @@ export default function Analytics() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#101010] border border-[#ec7578] rounded-2xl p-6 flex flex-col items-center hover:bg-[#1a1a1a] transition"
+              className="text-black border border-[#ec7578] rounded-2xl p-6 flex flex-col items-center hover:bg-[#1a1a1a] hover:text-white transition"
             >
               {stat.icon}
-              <h3 className="text-2xl font-bold mt-4 text-white">{stat.value}</h3>
-              <p className="text-[#9e89c0]">{stat.label}</p>
+              <h3 className="text-2xl font-bold mt-4 text-black">{stat.value}</h3>
+              <p className="text-black">{stat.label}</p>
             </div>
           ))}
         </div>

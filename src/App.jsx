@@ -5,12 +5,16 @@ import WorkShowcase from "./components/WorkShowcase";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Analytics from "./components/Analytics";
+import Reviews from "./components/Reviews";
+import Services from "./components/Services";
 import "./App.css"
-function App() {
+ function App() {
   return (
     <>
       <Navbar />
       <Hero />
+      <Reviews /> 
+      <Services />
       <Contact />
 
       <Analytics />

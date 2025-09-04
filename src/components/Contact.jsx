@@ -6,7 +6,7 @@ export default function Contact() {
     <Container
       id="contact"
       maxWidth="md"
-      sx={{ py: 10, bgcolor: "#101010", color: "white", borderRadius: 3 }}
+      sx={{ py: 10, bgcolor: "", color: "white", borderRadius: 3 }}
     >
       <Typography
         variant="h4"

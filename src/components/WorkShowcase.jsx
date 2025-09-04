@@ -1,15 +1,4 @@
 import { useState } from "react";
-import {
-  Container,
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  Button,
-  Pagination,
-  Box,
-} from "@mui/material";
 
 const projects = [
   {
@@ -40,7 +29,7 @@ const projects = [
   },
   {
     title: "Business France UK",
-    image: "bf.png",
+    image: "./bf.png",
     link: "https://www.businessfrance.fr/en",
     description: "Delivered SEO optimized ecommerce website.",
   },
@@ -54,12 +43,8 @@ const projects = [
 
 export default function WorkShowcase() {
   const [page, setPage] = useState(1);
-  const itemsPerPage = 6; // 6 projects per page (2 rows of 3)
+  const itemsPerPage = 6;  
   const count = Math.ceil(projects.length / itemsPerPage);
-
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
 
   const paginatedProjects = projects.slice(
     (page - 1) * itemsPerPage,
@@ -67,90 +52,59 @@ export default function WorkShowcase() {
   );
 
   return (
-    <Box id="work" sx={{ py: 10, bgcolor: "#101010", color: "white" }}>
-      <Container>
-        <Typography
-          variant="h4"
-          align="center"
-          gutterBottom
-          sx={{ color: "#ec7578", fontWeight: "bold" }}
-        >
+    <section id="work" className="py-16   text-black">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-12 text-[#ec7578]">
           My Work
-        </Typography>
+        </h2>
 
         {/* Grid */}
-        <Grid container spacing={4} justifyContent="center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {paginatedProjects.map((proj, i) => (
-            <Grid item xs={12} sm={6} md={4} key={i}>
-              <Card
-                sx={{
-                  boxShadow: 4,
-                  borderRadius: 3,
-                  bgcolor: "#1a1a1a",
-                  border: "1px solid #2a2a2a",
-                  transition: "0.3s",
-                  "&:hover": {
-                    transform: "translateY(-6px)",
-                    borderColor: "#ec7578",
-                  },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={proj.image}
-                  alt={proj.title}
-                />
-                <CardContent>
-                  <Typography variant="h6" gutterBottom sx={{ color: "#7794e5" }}>
-                    {proj.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: "#9e89c0", mb: 2 }}
-                  >
-                    {proj.description}
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    href={proj.link}
-                    target="_blank"
-                    sx={{
-                      mt: 1,
-                      backgroundColor: "#ec7578",
-                      "&:hover": {
-                        backgroundColor: "#c57f9c",
-                      },
-                    }}
-                  >
-                    Visit Site
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
+            <div
+              key={i}
+              className="  border border-[#2a2a2a] rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:border-[#ec7578]"
+            >
+              <img
+                src={proj.image}
+                alt={proj.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <h3 className="text-lg font-semibold mb-2 text-[#7794e5]">
+                  {proj.title}
+                </h3>
+                <p className="text-sm text-[#9e89c0] mb-4">{proj.description}</p>
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#ec7578] hover:bg-[#c57f9c] text-white px-4 py-2 rounded-md transition"
+                >
+                  Visit Site
+                </a>
+              </div>
+            </div>
           ))}
-        </Grid>
+        </div>
 
         {/* Pagination */}
-        <Box display="flex" justifyContent="center" mt={4}>
-          <Pagination
-            count={count}
-            page={page}
-            onChange={handleChange}
-            color="primary"
-            size="large"
-            sx={{
-              "& .MuiPaginationItem-root": {
-                color: "#ec7578",
-              },
-              "& .Mui-selected": {
-                backgroundColor: "#ec7578 !important",
-                color: "white !important",
-              },
-            }}
-          />
-        </Box>
-      </Container>
-    </Box>
+        <div className="flex justify-center mt-10 space-x-2">
+          {Array.from({ length: count }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => setPage(i + 1)}
+              className={`px-4 py-2 rounded-md ${
+                page === i + 1
+                  ? "bg-[#ec7578] text-white"
+                  : "bg-transparent border border-[#ec7578] text-[#ec7578] hover:bg-[#ec7578] hover:text-white"
+              } transition`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
