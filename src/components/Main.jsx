@@ -110,10 +110,11 @@ const PortfolioWebsite = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button style={{background:"linear-gradient(to right, #FF3834 0%, #FF7133 100%)"}} className="  text-white px-8 py-4 rounded-lg font-semibold  transition-colors">
-                  Get Started
+                  <a href="#contact"> Contact Me </a>
+                  
                 </button>
                 <button style={{background:"linear-gradient(to right, #FF3834 0%, #FF7133 100%)"}} className="border-2  text-white px-8 py-4 rounded-lg font-semibold transition-colors">
-                  View Portfolio
+                 <a href="#work"> See My Work</a>
                 </button>
               </div>
             </div>
@@ -516,62 +517,115 @@ const PortfolioWebsite = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Let's Work Together</h2>
-            <p className="text-xl text-gray-700">Ready to start your next project? Get in touch!</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">Email</h4>
-                    <p className="text-gray-700">hello@webdevpro.com</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">Phone</h4>
-                    <p className="text-gray-700">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900">Location</h4>
-                    <p className="text-gray-700">Available worldwide</p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8">
-                <h4 className="font-bold text-gray-900 mb-4">Follow Me</h4>
-                <div className="flex space-x-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
-                    <Linkedin className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
-                    <Github className="w-5 h-5 text-gray-700" />
-                  </div>
-                </div>
-              </div>
+         <section id="contact" class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-black mb-4">Let's Work Together</h2>
+                <p class="text-xl text">Ready to start your next project? Get in touch today!</p>
             </div>
             
-          </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                 <div class="bg-white rounded-2xl p-8 shadow-xl contact-card">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                         <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <p class="text-gray-700">ouldhenniabaghdad.com</p>
+                            </div>
+                        </div>
+                        
+                     
+                        
+                         <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-emerald-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">WhatsApp</h4>
+                                <p class="text-gray-700">+213 549891600</p>
+                            </div>
+                        </div>
+                        
+                         <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Location</h4>
+                                <p class="text-gray-700">Available worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="mt-10">
+                        <h4 class="font-bold text-gray-900 mb-4 text-xl">Follow Me</h4>
+                        <div class="grid grid-cols-4 gap-3">
+                             <a href="https://www.linkedin.com/in/abdelkader-ould-hennia/" class="social-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
+                                <i class="fab fa-linkedin-in text-blue-600 text-lg"></i>
+                            </a>
+                            
+                             <a href="https://x.com/Kader_1680" class="social-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
+                                <i class="fab fa-twitter text-blue-400 text-lg"></i>
+                            </a>
+                            
+                             <a href="https://www.youtube.com/@Jeolardo1972/" class="social-icon w-12 h-12 bg-red-100 rounded-full flex items-center justify-center hover:bg-red-200 cursor-pointer transition-colors">
+                                <i class="fab fa-youtube text-red-600 text-lg"></i>
+                            </a>
+                            
+                             <a href="https://github.com/Kader1680" class="social-icon w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
+                                <i class="fab fa-github text-gray-700 text-lg"></i>
+                            </a>
+                            
+                             <a href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61575335054762" class="social-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
+                                <i class="fab fa-facebook-f text-blue-700 text-lg"></i>
+                            </a>
+                            
+                          
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="rounded-2xl p-8 shadow-xl contact-card">
+                    <h3 class="text-2xl font-bold text-black-800 mb-6">Send a Message</h3>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="John Doe" />
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="john@example.com"/>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="Project Inquiry"/>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </section>
 
-      {/* Footer */}
+        
+        </section>
+
       <footer className="bg-[#3a1277] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
