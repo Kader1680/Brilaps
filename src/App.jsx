@@ -8,10 +8,11 @@ import Analytics from "./components/Analytics";
 import Reviews from "./components/Reviews";
 import Services from "./components/Services";
 import "./App.css"
+import PortfolioWebsite from "./components/Main";
  function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <Reviews /> 
       <Services />
@@ -20,7 +21,10 @@ import "./App.css"
       <Analytics />
       <WorkShowcase />
       <Contact />
-      <Footer />
+      <Footer /> */}
+
+      <PortfolioWebsite />
+      
     </>
   );
 }

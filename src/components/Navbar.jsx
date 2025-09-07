@@ -54,7 +54,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Icon */}
+ 
           <div className="md:hidden">
             <IconButton edge="end" color="inherit" onClick={() => setOpen(true)}>
               <MenuIcon />
@@ -62,9 +62,10 @@ export default function Navbar() {
           </div>
         </Toolbar>
       </AppBar>
+       
 
-      {/* Mobile Drawer */}
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+
+       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <List sx={{ width: 220, backgroundColor: "#0d0d0d", height: "100%", color: "#fff" }}>
           {menuItems.map((item, index) => (
             <ListItem
