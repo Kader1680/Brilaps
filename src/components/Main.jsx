@@ -54,12 +54,12 @@ const PortfolioWebsite = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav style={{backgroundColor:"#3a1277"}} className="shadow-lg fixed w-full top-0 z-50 text-white">
+   
+      <nav style={{backgroundColor:"#0f1e5c"}} className="shadow-lg fixed w-full top-0 z-50 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-4xl font-bold fs-2">Jeoloardo</h1>
+              <h1 style={{color:"#fd9609"}} className="text-4xl  font-bold fs-2">Brilaps</h1>
             </div>
             
             {/* Desktop Menu */}
@@ -103,25 +103,25 @@ const PortfolioWebsite = () => {
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Professional Website
-                <span className="text-blue-600"> Development</span>
+                <span style={{color:"#fd9609"}}> Development</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
                 Transform your business ideas into powerful digital solutions. I create modern, responsive websites that drive results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button style={{background:"linear-gradient(to right, #FF3834 0%, #FF7133 100%)"}} className="  text-white px-8 py-4 rounded-lg font-semibold  transition-colors">
+                <button style={{background:"linear-gradient(to right, #FF3834 0%, #fd9609 100%)"}} className="  text-white px-8 py-4 rounded-lg font-semibold  transition-colors">
                   <a href="#contact"> Contact Me </a>
                   
                 </button>
-                <button style={{background:"linear-gradient(to right, #FF3834 0%, #FF7133 100%)"}} className="border-2  text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                <button style={{background:"linear-gradient(to right, #0f1e5c 0%, #0f1e5c 100%)"}} className="border-2  text-white px-8 py-4 rounded-lg font-semibold transition-colors">
                  <a href="#work"> See My Work</a>
                 </button>
               </div>
             </div>
             <div className="relative">
               <img
-                src="/New_10img.png"
-                alt="Hero"
+                src="/banner.png"
+                alt="Brilaps"
                 className="rounded-xl shadow-lg"
               />
               {/* Decorative elements */}
@@ -147,7 +147,7 @@ const PortfolioWebsite = () => {
                   <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center">
                     {/* Placeholder for developer image */}
                     <div className="   rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white">
-                      <img  src="/me.png" alt="Developer" className="w-full h-full object-cover"/>
+                      <img  src="/me.png" alt="Brilaps" className="w-full h-full object-cover"/>
                     </div>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ const PortfolioWebsite = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+       
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -517,119 +517,66 @@ const PortfolioWebsite = () => {
       </section>
 
       {/* Contact Section */}
-         <section id="contact" class="py-20 gradient-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-black mb-4">Let's Work Together</h2>
-                <p class="text-xl text">Ready to start your next project? Get in touch today!</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                 <div class="bg-white rounded-2xl p-8 shadow-xl contact-card">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
-                    
-                    <div class="space-y-6">
-                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">Email</h4>
-                                <p class="text-gray-700">ouldhenniabaghdad.com</p>
-                            </div>
-                        </div>
-                        
-                     
-                        
-                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                                <i class="fab fa-whatsapp text-emerald-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">WhatsApp</h4>
-                                <p class="text-gray-700">+213 549891600</p>
-                            </div>
-                        </div>
-                        
-                         <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900">Location</h4>
-                                <p class="text-gray-700">Available worldwide</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                     <div class="mt-10">
-                        <h4 class="font-bold text-gray-900 mb-4 text-xl">Follow Me</h4>
-                        <div class="grid grid-cols-4 gap-3">
-                             <a href="https://www.linkedin.com/in/abdelkader-ould-hennia/" class="social-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
-                                <i class="fab fa-linkedin-in text-blue-600 text-lg"></i>
-                            </a>
-                            
-                             <a href="https://x.com/Kader_1680" class="social-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
-                                <i class="fab fa-twitter text-blue-400 text-lg"></i>
-                            </a>
-                            
-                             <a href="https://www.youtube.com/@Jeolardo1972/" class="social-icon w-12 h-12 bg-red-100 rounded-full flex items-center justify-center hover:bg-red-200 cursor-pointer transition-colors">
-                                <i class="fab fa-youtube text-red-600 text-lg"></i>
-                            </a>
-                            
-                             <a href="https://github.com/Kader1680" class="social-icon w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 cursor-pointer transition-colors">
-                                <i class="fab fa-github text-gray-700 text-lg"></i>
-                            </a>
-                            
-                             <a href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61575335054762" class="social-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 cursor-pointer transition-colors">
-                                <i class="fab fa-facebook-f text-blue-700 text-lg"></i>
-                            </a>
-                            
-                          
-                        </div>
-                    </div>
-                </div>
-                
-               
-                <div class="rounded-2xl p-8 shadow-xl contact-card">
-                    <h3 class="text-2xl font-bold text-black-800 mb-6">Send a Message</h3>
-                    
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="John Doe" />
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="john@example.com"/>
-                        </div>
-                        
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="Project Inquiry"/>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" placeholder="Tell me about your project..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center">
-                            <i class="fas fa-paper-plane mr-2"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      
+      <section id="contact" class="py-20 gradient-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-black mb-4">Let's Work Together</h2>
+      <p class="text-xl text">Ready to start your next project? Get in touch today!</p>
+    </div>
 
-        
-        </section>
+   
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      
+    
+      <a href="mailto:ouldhenniabaghdad.com" 
+         class="bg-blue-500/10 hover:bg-blue-500/20 rounded-xl p-6 flex flex-col items-center justify-center text-center transition">
+        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-envelope text-blue-600 text-2xl"></i>
+        </div>
+        <h4 class="font-bold text-gray-900">Email</h4>
+        <p class="text-gray-700 text-sm break-words">ouldhenniabaghdad@gmail.com</p>
+      </a>
+
+      <a href="https://wa.me/213549891600" target="_blank"
+         class="bg-emerald-500/10 hover:bg-emerald-500/20 rounded-xl p-6 flex flex-col items-center justify-center text-center transition">
+        <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
+          <i class="fab fa-whatsapp text-emerald-600 text-2xl"></i>
+        </div>
+        <h4 class="font-bold text-gray-900">WhatsApp</h4>
+        <p class="text-gray-700 text-sm">+213 549891600</p>
+      </a>
+
+      <a href="https://www.instagram.com/brilaps7/" target="_blank"
+         class="bg-pink-500/10 hover:bg-pink-500/20 rounded-xl p-6 flex flex-col items-center justify-center text-center transition">
+        <div class="w-16 h-16 bg-pink-500/20 rounded-full flex items-center justify-center mb-4">
+          <i class="fab fa-instagram text-pink-500 text-2xl"></i>
+        </div>
+        <h4 class="font-bold text-gray-900">Instagram</h4>
+        <p class="text-gray-700 text-sm">@brilaps7</p>
+      </a>
+
+      
+      <a href="https://web.facebook.com/profile.php?viewas=100000686899395&id=61575335054762" target="_blank"
+         class="bg-blue-700/10 hover:bg-blue-700/20 rounded-xl p-6 flex flex-col items-center justify-center text-center transition">
+        <div class="w-16 h-16 bg-blue-700/20 rounded-full flex items-center justify-center mb-4">
+          <i class="fab fa-facebook-f text-blue-700 text-2xl"></i>
+        </div>
+        <h4 class="font-bold text-gray-900">Facebook</h4>
+        <p class="text-gray-700 text-sm">Facebook Profile</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
 
       <footer className="bg-[#3a1277] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Jeoloardo Web Solutions</h3>
+            <h3 className="text-2xl font-bold mb-4">Brilaps Solutions</h3>
             <p className="text-gray-400 mb-6">Professional freelance web development services</p>
             <div className="flex justify-center space-x-6 mb-8">
               <a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a>
