@@ -12,8 +12,4 @@ createRoot(document.getElementById('root')).render(
 
 
 
-
-
-const numbers = [1, 2, 3, 4];
-const squared = numbers.map(n => n * n);
-console.log(squared); // [1, 4, 9, 16]
+ 

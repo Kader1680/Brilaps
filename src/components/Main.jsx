@@ -51,6 +51,48 @@ const PortfolioWebsite = () => {
   },
 ];
 
+const reviews = [
+  {
+    image: "./client1.png",
+    flag: "./usa.png",
+  },
+  {
+    image: "./client2.png",
+    country: "🇫🇷 United Arab Emarate",
+    flag: "./uae.png",
+
+  },
+  {
+    image: "./client3.png",
+    country: "Uk United Of kinkdom",
+    flag: "./uk.png",
+
+  },
+  {
+    image: "./client4.png",
+    country: "🇬🇧 UK",
+    flag: "./france.png",
+
+  },
+  {
+    image: "./client5.png",
+    country: "🇨🇦 Canada",
+    flag: "./usa.png",
+
+  },
+  {
+    image: "./client6.png",
+    country: "🇨🇦 Canada",
+    flag: "./usa.png",
+
+  },
+   {
+    image: "./client10.png",
+    country: "🇨🇦 Canada",
+    flag: "./algeria.png",
+
+  },
+];
 
   return (
     <div className="min-h-screen bg-white">
@@ -62,7 +104,7 @@ const PortfolioWebsite = () => {
               <h1 style={{color:"#fd9609"}} className="text-4xl  font-bold fs-2">Brilaps</h1>
             </div>
             
-            {/* Desktop Menu */}
+      
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="#home" className=" hover:text-blue-600 px-3 py-2 text-xl font-bold transition-colors ">Home</a>
@@ -87,7 +129,7 @@ const PortfolioWebsite = () => {
           <div className="md:hidden bg-white shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a href="#home" className="text-gray-800 hover:text-blue-600 block px-3 py-2 text-sm font-medium" onClick={toggleMenu}>Home</a>
-              <a href="#who-am" className="text-gray-800 hover:text-blue-600 block px-3 py-2 text-sm font-medium" onClick={toggleMenu}>Who Am I</a>
+              <a href="#who-am" className="text-gray-800 hover:text-blue-600 block px-3 py-2 text-xs font-medium" onClick={toggleMenu}>Who Am I</a>
               <a href="#work" className="text-gray-800 hover:text-blue-600 block px-3 py-2 text-sm font-medium" onClick={toggleMenu}>Work</a>
               <a href="#reviews" className="text-gray-800 hover:text-blue-600 block px-3 py-2 text-sm font-medium" onClick={toggleMenu}>Reviews</a>
               <a href="#contact" className="text-gray-800 hover:text-blue-600 block px-3 py-2 text-sm font-medium" onClick={toggleMenu}>Contact</a>
@@ -304,7 +346,7 @@ const PortfolioWebsite = () => {
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-6 bg-blue-50 rounded-lg">
-                  <h3 className="text-2xl font-bold text-blue-600 mb-2">50+</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-2">22+</h3>
                   <p className="text-gray-700">Projects Completed</p>
                 </div>
                 <div className="text-center p-6 bg-purple-50 rounded-lg">
@@ -395,7 +437,7 @@ const PortfolioWebsite = () => {
         </div>
       </section>
 
-      {/* Work Portfolio Section */}
+
       <section id="work" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -413,7 +455,7 @@ const PortfolioWebsite = () => {
               key={idx}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              {/* Project Image */}
+          
               <div className="relative h-48 w-full">
                 <img
                   src={project.image}
@@ -423,7 +465,7 @@ const PortfolioWebsite = () => {
                 />
               </div>
 
-              {/* Project Content */}
+          
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {project.title}
@@ -444,80 +486,50 @@ const PortfolioWebsite = () => {
               </div>
             </div>
           ))}
+
+          new 
         </div>
       </div>
     </section>
-      {/* Reviews Section */}
-      <section id="reviews" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Client Reviews</h2>
-            <p className="text-xl text-gray-700">What my clients say about working with me</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6">
-                "Exceptional work! The website exceeded our expectations and was delivered on time. Professional communication throughout the project."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold">JD</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-900">John Davis</h4>
-                  <p className="text-gray-600 text-sm">CEO, Tech Startup</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6">
-                "Outstanding developer! Created exactly what we needed for our e-commerce platform. Highly recommended for any web development project."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-bold">SM</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-900">Sarah Miller</h4>
-                  <p className="text-gray-600 text-sm">Founder, Online Store</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-6">
-                "Great attention to detail and excellent problem-solving skills. The mobile app works perfectly and our users love it!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <span className="text-purple-600 font-bold">MJ</span>
-                </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-gray-900">Michael Johnson</h4>
-                  <p className="text-gray-600 text-sm">Product Manager</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
-      {/* Contact Section */}
-      
+
+ <section id="reviews" className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Client Reviews</h2>
+      <p className="text-xl text-gray-700">
+        What my clients say about working with me
+      </p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {reviews.map((review, index) => (
+        <div
+          key={index}
+          className="relative rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105"
+        >
+          {/* Flag Icon */}
+          <img
+            src={review.flag}
+            alt="Country Flag"
+            className="absolute top-2 left-2 w-8 h-6 rounded shadow-md"
+          />
+
+          {/* Full Image */}
+          <img
+            src={review.image}
+            alt="Client"
+            className="w-full h-64 object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+   
+
+
       <section id="contact" class="py-20 gradient-bg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
@@ -573,7 +585,7 @@ const PortfolioWebsite = () => {
 
 
 
-      <footer className="bg-[#3a1277] text-white py-12">
+      <footer className="bg-[#0f1e5c] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Brilaps Solutions</h3>
