@@ -4,7 +4,24 @@ import React from "react";
 const About = () => {
   return (
     <section id="who-am" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+     <div>
+        <div className="w-full">
+          <div className="aspect-w-16 aspect-h-9 rounded-xl shadow-2xl overflow-hidden">
+            <video
+              className="w-full h-full object-cover"
+              src="/zeez.mp4" // replace with your video path
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+            />
+          </div>
+        </div>
+    </div>
+
+
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <img src="/me.png" alt="About Me" className="rounded-lg shadow-lg" />
         </div>
@@ -22,7 +39,7 @@ const About = () => {
             Let’s Work Together
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
