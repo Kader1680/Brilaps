@@ -1,88 +1,118 @@
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    { label: "Who Am I", href: "#who" },
-    { label: "Services", href: "#services" },
-    { label: "Why", href: "#why" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Work", href: "#work" },
-    { label: "Contact", href: "#contact" },
-  ];
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <>
-      <AppBar
-        position="fixed"
-        sx={{
-          // backgroundColor: "#0d0d0d",
-          color: "black",
-          boxShadow: "0px 2px 10px rgba(0,0,0,0.5)",
-        }}
-      >
-        <Toolbar className="flex justify-between">
+    <nav
+      style={{ backgroundColor: "#0f1e5c" }}
+      className="shadow-lg fixed w-full top-0 z-50 text-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: "bold",
-              letterSpacing: "1px",
-              color: "#ec7578",
-            }}
-          >
-            Jeolardo <span style={{ color: "#fff" }}>Web</span> Solutions
-          </Typography>
+          {/* Brand (Logo + Name) */}
+          <div className="flex items-center space-x-2">
+            <img
+              src="/logo (2).png"
+              alt="Brilaps Logo"
+              className="w-8 h-8"   // 32px max
+            />
+            <span className="text-lg font-semibold">Brilaps</span> {/* 18px font */}
+          </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex gap-4">
-            {menuItems.map((item, index) => (
-              <Button
-                key={index}
-                sx={{
-                  color: "#fff",
-                  fontWeight: "500",
-                  "&:hover": { color: "#ec7578", backgroundColor: "transparent" },
-                }}
-                href={item.href}
+          {/* Desktop menu */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                className="hover:text-blue-400 px-3 py-2 text-sm font-medium"
               >
-                {item.label}
-              </Button>
-            ))}
+                Home
+              </a>
+              <a
+                href="#who-am"
+                className="hover:text-blue-400 px-3 py-2 text-sm font-medium"
+              >
+                Who Am I
+              </a>
+              <a
+                href="#work"
+                className="hover:text-blue-400 px-3 py-2 text-sm font-medium"
+              >
+                Work
+              </a>
+              <a
+                href="#reviews"
+                className="hover:text-blue-400 px-3 py-2 text-sm font-medium"
+              >
+                Reviews
+              </a>
+              <a
+                href="#contact"
+                className="hover:text-blue-400 px-3 py-2 text-sm font-medium"
+              >
+                Contact
+              </a>
+            </div>
           </div>
 
- 
+          {/* Mobile menu button */}
           <div className="md:hidden">
-            <IconButton edge="end" color="inherit" onClick={() => setOpen(true)}>
-              <MenuIcon />
-            </IconButton>
+            <button onClick={toggleMenu}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-        </Toolbar>
-      </AppBar>
-       
+        </div>
+      </div>
 
-
-       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <List sx={{ width: 220, backgroundColor: "#0d0d0d", height: "100%", color: "#fff" }}>
-          {menuItems.map((item, index) => (
-            <ListItem
-              button
-              key={index}
-              component="a"
-              href={item.href}
-              onClick={() => setOpen(false)}
-              sx={{
-                "&:hover": { backgroundColor: "#1a1a1a", color: "#ec7578" },
-              }}
+      {/* Mobile dropdown menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white shadow-lg">
+          <div className="px-2 pt-2 pb-3">
+            <a
+              href="#home"
+              className="block px-3 py-2 text-gray-700"
+              onClick={toggleMenu}
             >
-              <ListItemText primary={item.label} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-    </>
+              Home
+            </a>
+            <a
+              href="#who-am"
+              className="block px-3 py-2 text-gray-700"
+              onClick={toggleMenu}
+            >
+              Who Am I
+            </a>
+            <a
+              href="#work"
+              className="block px-3 py-2 text-gray-700"
+              onClick={toggleMenu}
+            >
+              Work
+            </a>
+            <a
+              href="#reviews"
+              className="block px-3 py-2 text-gray-700"
+              onClick={toggleMenu}
+            >
+              Reviews
+            </a>
+            <a
+              href="#contact"
+              className="block px-3 py-2 text-gray-700"
+              onClick={toggleMenu}
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
   );
-}
+};
+
+export default Navbar;

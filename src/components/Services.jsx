@@ -1,73 +1,41 @@
-export default function Services() {
+import React from "react";
+import { Code, Globe, Smartphone } from "lucide-react";
+
+const Services = () => {
   const services = [
     {
-      img: "./ecommerce.png",
-      title: "E-commerce Development",
-      points: [
-        "Custom online stores",
-        "Shopping cart & checkout",
-        "Payment integration",
-      ],
+      icon: <Code size={40} />,
+      title: "Web Development",
+      desc: "Build responsive and scalable web applications tailored to your business.",
     },
     {
-      img: "./landing.png",
-      title: "Landing Pages",
-      points: [
-        "High-converting design",
-        "SEO optimized",
-        "Fast & responsive",
-      ],
+      icon: <Globe size={40} />,
+      title: "SEO Optimization",
+      desc: "Improve your website’s ranking and visibility with modern SEO strategies.",
     },
     {
-      img: "./sass.png",
-      title: "Build SaaS Platforms",
-      points: [
-        "Scalable architecture",
-        "Authentication & billing",
-        "API integrations",
-      ],
-    },
-    {
-      img: "./webapp.png",
-      title: "Custom Web Applications",
-      points: [
-        "Tailored solutions",
-        "Modern frameworks",
-        "Secure & efficient",
-      ],
+      icon: <Smartphone size={40} />,
+      title: "Mobile Friendly",
+      desc: "Designs that work seamlessly across desktops, tablets, and smartphones.",
     },
   ];
 
   return (
-    <section className="py-16 bg-[#1a1a1a] text-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#ec7578]">
-          My Services
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="bg-[#2a2a2a] rounded-xl shadow-lg p-1 text-center hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src={service.img}
-                alt={service.title}
-                className="  mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-3 text-[#ec7578]">
-                {service.title}
-              </h3>
-              <ul className="text-gray-300 text-sm space-y-2">
-                {service.points.map((point, idx) => (
-                  <li key={idx}>✅ {point}</li>
-                ))}
-              </ul>
+    <section id="services" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">Services I Offer</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {services.map((s, i) => (
+            <div key={i} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+              <div className="text-[#fd9609] flex justify-center mb-6">{s.icon}</div>
+              <h3 className="text-2xl font-semibold mb-4">{s.title}</h3>
+              <p className="text-gray-600">{s.desc}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Services;

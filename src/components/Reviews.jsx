@@ -1,43 +1,27 @@
-export default function ReviewsAndGallery() {
+import React from "react";
+
+const Reviews = () => {
   const reviews = [
-    "./client1.png",
-    "./client2.png",
-    "./client3.png",
-    "./client4.png",
-    "./client5.png",
-    // "./client6.png",
-   
+    { name: "Sarah Johnson", text: "Amazing work! My website looks fantastic." },
+    { name: "David Lee", text: "Professional and fast delivery. Highly recommended!" },
+    { name: "Emily Davis", text: "Great communication and perfect execution of the project." },
   ];
 
-  
-
   return (
-    <>
-      {/* Reviews Section */}
-      <section className="py-16 bg-[#1a1a1a] text-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#ec7578]">
-            Client Reviews
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {reviews.map((img, i) => (
-              <div
-                key={i}
-                className="rounded-xl overflow-hidden shadow-lg border border-[#2a2a2a]"
-              >
-                <img
-                  src={img}
-                  alt={`Review ${i + 1}`}
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
+    <section id="reviews" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">Client Reviews</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {reviews.map((r, i) => (
+            <div key={i} className="bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-gray-700 mb-4">"{r.text}"</p>
+              <h3 className="font-semibold text-lg">{r.name}</h3>
+            </div>
+          ))}
         </div>
-      </section>
-
-     
-    </>
+      </div>
+    </section>
   );
-}
+};
+
+export default Reviews;

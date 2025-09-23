@@ -1,38 +1,43 @@
-export default function Hero() {
-  return (
-    <div className="min-h-screen flex items-center bg-gradient-to-r from-gray-900 to-gray-700 text-white">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
-           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Hi, I'm Jeolardo 
-            </h1>
-            <h2 className="text-xl md:text-2xl mb-4">
-              Fullstack Web Developer | Creator of modern websites 🚀
-            </h2>
-            <p className="mb-6 text-lg text-gray-300">
-              Welcome to my portfolio! I specialize in building responsive,
-              fast, and user-friendly web applications that help businesses
-              grow online.
-            </p>
-            <a
-              href="#work"
-              className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-300"
-            >
-              View My Work
-            </a>
-          </div>
+import React from "react";
 
-           <div className="flex justify-center">
-            <img
-              src="./me.png" 
-              alt="Jeolardo"
-              className="rounded-2xl shadow-lg max-w-full h-auto"
-            />
-          </div>
+const Hero = () => {
+  return (
+    <section
+      id="home"
+      className="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center"
+    >
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center  ">
+        
+        {/* 🔥 Headline */}
+        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+          Stop Losing Clients to{" "}
+          <span style={{ color: "#fd9609" }}>Bad Websites</span>
+        </h1>
+
+        {/* Supporting Text */}
+        <p className="text-lg md:text-xl text-gray-700 mb-8">
+          I build modern, responsive websites that don’t just look good —
+          they bring you more leads, more sales, and more growth.
+        </p>
+
+        {/* CTAs */}
+        <div className=" flex flex-wrap justify-center lg:justify-center gap-4">
+          <a
+            href="#contact"
+            className="px-8 py-4 bg-gradient-to-r from-red-500 to-yellow-500 text-white rounded-lg font-semibold shadow-md hover:opacity-90 transition"
+          >
+            Contact Me
+          </a>
+          <a
+            href="#work"
+            className="px-8 py-4 bg-[#0f1e5c] text-white rounded-lg font-semibold shadow-md hover:opacity-90 transition"
+          >
+            See My Work
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default Hero;

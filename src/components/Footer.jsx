@@ -1,11 +1,18 @@
-import { Typography, Container } from "@mui/material";
+import React from "react";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <Container className="text-black fw-bolder fs-2" sx={{ textAlign: "center", py: 3 }}>
-      <Typography variant="body2" color="text">
-        © {new Date().getFullYear()} Jeolardo Web Solutions. All rights reserved.
-      </Typography>
-    </Container>
+    <footer className="py-8 bg-[#0f1e5c] text-white text-center">
+      <p className="text-lg">
+        © {new Date().getFullYear()} Brilaps. All rights reserved.
+      </p>
+      <div className="flex justify-center gap-6 mt-4">
+        <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+        <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </footer>
   );
-}
+};
+
+export default Footer;
