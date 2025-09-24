@@ -7,25 +7,21 @@ export default function GetStarted() {
     {
       name: "WhatsApp",
       href: "https://wa.me/213549891600",
-      bg: "bg-green-500",
       icon: <FaWhatsapp size={28} />,
     },
     {
       name: "Gmail",
       href: "mailto:ouldhenniabaghdad@gmail.com",
-      bg: "bg-red-500",
       icon: <SiGmail size={28} />,
     },
     {
       name: "Facebook",
-      href: "https://facebook.com/https://web.facebook.com/profile.php?id=61575335054762",
-      bg: "bg-blue-600",
+      href: "https://web.facebook.com/profile.php?id=61575335054762",
       icon: <FaFacebookF size={28} />,
     },
     {
       name: "Instagram",
       href: "https://www.instagram.com/brilaps7/",
-      bg: "bg-pink-500",
       icon: <FaInstagram size={28} />,
     },
   ];
@@ -46,14 +42,15 @@ export default function GetStarted() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
+          {/* Social Grid */}
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {socials.map((item, idx) => (
               <a
                 key={idx}
                 href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className={`${item.bg} flex flex-col items-center justify-center gap-2 p-6 rounded-lg text-white shadow-md hover:opacity-90 transition`}
+                className="flex flex-col items-center justify-center gap-2 p-6 border rounded-lg shadow-sm hover:shadow-md transition text-gray-600 hover:text-gray-800"
               >
                 {item.icon}
                 <span className="font-medium">{item.name}</span>

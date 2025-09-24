@@ -1,42 +1,41 @@
+import Image from "next/image";
+
 const Testimonials = () => {
   const reviews = [
     {
-      image: "./client1.jpg",
+      image: "/client1.jpg",
       country: "America",
-
-      flag: "./usa.png",
+      flag: "/usa.png",
     },
     {
-      image: "./client2.png",
+      image: "/client2.png",
       country: "🇦🇪 United Arab Emirates",
-      flag: "./uae.png",
+      flag: "/uae.png",
     },
     {
-      image: "./client3.png",
+      image: "/client3.png",
       country: "🇬🇧 United Kingdom",
-      flag: "./uk.png",
+      flag: "/uk.png",
     },
     {
-      image: "./client4.png",
+      image: "/client4.png",
       country: "🇫🇷 France",
-      flag: "./france.png",
+      flag: "/france.png",
     },
     {
-      image: "./client5.png",
+      image: "/client5.png",
       country: "America",
-
-      flag: "./usa.png",
+      flag: "/usa.png",
     },
     {
-      image: "./clientV.png",
+      image: "/clientV.png",
       country: "America",
-
-      flag: "./usa.png",
+      flag: "/usa.png",
     },
     {
-      image: "./client7.png",
+      image: "/client7.png",
       country: "🇩🇿 Algeria",
-      flag: "./algeria.png",
+      flag: "/algeria.png",
     },
   ];
 
@@ -58,16 +57,22 @@ const Testimonials = () => {
               className="relative rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105"
             >
               {/* Flag Icon */}
-              <img
-                src={review.flag}
-                alt="Country Flag"
-                className="absolute top-2 left-2 w-8 h-6 rounded shadow-md"
-              />
+              <div className="absolute top-2 left-2 w-8 h-6">
+                <Image
+                  src={review.flag}
+                  alt={`${review.country} Flag`}
+                  width={32}
+                  height={24}
+                  className="rounded shadow-md"
+                />
+              </div>
 
               {/* Full Image */}
-              <img
+              <Image
                 src={review.image}
                 alt={`Client ${index + 1}`}
+                width={500}
+                height={256}
                 className="w-full h-64 object-cover"
               />
             </div>

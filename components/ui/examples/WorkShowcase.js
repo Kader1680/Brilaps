@@ -1,51 +1,50 @@
 import { useState } from "react";
+import Image from "next/image";
 
 const projects = [
   {
     title: "Buca Restaurant Online",
-    image: "./buca.png",
+    image: "/buca.png",
     link: "https://buca.ca/",
     description:
       "Built an ecommerce platform that helped the owner generate $1022 in sales within the first month.",
   },
   {
     title: "Canada India Business",
-    image: "./canada.png",
+    image: "/canada.png",
     link: "https://www.canada-indiabusiness.com/",
     description:
       "Built an ecommerce platform that helped the owner generate $1022 in sales within the first month.",
   },
   {
     title: "The Good Coffee Society",
-    image: "./coffe.png",
+    image: "/coffe.png",
     link: "https://thegoodcoffeesociety.com/",
     description: "Another example of a high-converting ecommerce store.",
   },
   {
     title: "Hawksmoor Air Street",
-    image: "./food.png",
+    image: "/food.png",
     link: "https://thehawksmoor.com/locations/airstreet/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
     description: "Helped increase visibility and client conversions online.",
   },
   {
     title: "Business France UK",
-    image: "bf.png",
+    image: "/bf.png",
     link: "https://www.businessfrance.fr/en",
     description: "Delivered SEO optimized ecommerce website.",
   },
   {
     title: "Qatar Building Company",
-    image: "./qatars.png",
+    image: "/qatars.png",
     link: "https://qbc.qa/",
     description: "Designed modern UI for ecommerce business growth.",
   },
 ];
 
 export default function WorkShowcase() {
-
-
   const [page, setPage] = useState(1);
-  const itemsPerPage = 6;  
+  const itemsPerPage = 6;
   const count = Math.ceil(projects.length / itemsPerPage);
 
   const paginatedProjects = projects.slice(
@@ -56,9 +55,6 @@ export default function WorkShowcase() {
   const handlePageChange = (value) => {
     setPage(value);
   };
-
-  
-  
 
   return (
     <section id="work" className="py-20 bg-gray-50">
@@ -75,11 +71,14 @@ export default function WorkShowcase() {
               key={i}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300"
             >
-              <img
-                src={proj.image}
-                alt={proj.title}
-                className="w-full h-52 object-cover"
-              />
+              <div className="relative w-full h-52">
+                <Image
+                  src={proj.image}
+                  alt={proj.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800">
                   {proj.title}

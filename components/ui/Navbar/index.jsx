@@ -23,7 +23,7 @@ const Navbar = () => {
         }
         events.on("routeChangeStart", () => handleState());
         events.on("hashChangeStart", () => handleState());
-    }, [])
+    }, [events])
 
     const handleNavMenu = () => {
         setState(!state)
