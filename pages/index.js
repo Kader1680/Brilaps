@@ -7,6 +7,7 @@ import Hero from "../components/ui/Hero";
 import LogoGrid from "../components/ui/LogoGrid";
 import Testimonials from "../components/ui/Testimonials";
 import ToolKit from "../components/ui/ToolKit";
+import WorkShowcase from "../components/ui/examples/WorkShowcase";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <LogoGrid />
       <GradientWrapper>
+      <WorkShowcase />
         <Features />
         <CTA />
       </GradientWrapper>
