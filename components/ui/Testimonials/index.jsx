@@ -1,42 +1,18 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 const Testimonials = () => {
+  const [activeImage, setActiveImage] = useState(null);
+
   const reviews = [
-    {
-      image: "/client1.jpg",
-      country: "America",
-      flag: "/usa.png",
-    },
-    {
-      image: "/client2.png",
-      country: "🇦🇪 United Arab Emirates",
-      flag: "/uae.png",
-    },
-    {
-      image: "/client3.png",
-      country: "🇬🇧 United Kingdom",
-      flag: "/uk.png",
-    },
-    {
-      image: "/client4.png",
-      country: "🇫🇷 France",
-      flag: "/france.png",
-    },
-    {
-      image: "/client5.png",
-      country: "America",
-      flag: "/usa.png",
-    },
-    {
-      image: "/clientV.png",
-      country: "America",
-      flag: "/usa.png",
-    },
-    {
-      image: "/client7.png",
-      country: "🇩🇿 Algeria",
-      flag: "/algeria.png",
-    },
+    { image: "/client1.jpg", country: "America", flag: "/usa.png" },
+    { image: "/client2.png", country: "🇦🇪 United Arab Emirates", flag: "/uae.png" },
+    { image: "/client3.png", country: "🇬🇧 United Kingdom", flag: "/uk.png" },
+    { image: "/client4.png", country: "🇫🇷 France", flag: "/france.png" },
+    { image: "/client5.png", country: "America", flag: "/usa.png" },
+    { image: "/clientV.png", country: "America", flag: "/usa.png" },
+    { image: "/client7.png", country: "🇩🇿 Algeria", flag: "/algeria.png" },
   ];
 
   return (
@@ -50,11 +26,14 @@ const Testimonials = () => {
             What my clients say about working with me
           </p>
         </div>
+
+        {/* Grid of Reviews */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="relative rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105"
+              className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+              onClick={() => setActiveImage(review.image)}
             >
               {/* Flag Icon */}
               <div className="absolute top-2 left-2 w-8 h-6">
@@ -67,7 +46,7 @@ const Testimonials = () => {
                 />
               </div>
 
-              {/* Full Image */}
+              {/* Client Image */}
               <Image
                 src={review.image}
                 alt={`Client ${index + 1}`}
@@ -79,6 +58,28 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
+
+      {/* Fullscreen Image Modal */}
+      {activeImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          onClick={() => setActiveImage(null)}
+        >
+          <Image
+            src={activeImage}
+            alt="Full View"
+            width={1200}
+            height={800}
+            className="max-w-full max-h-full object-contain p-4"
+          />
+          <button
+            onClick={() => setActiveImage(null)}
+            className="absolute top-4 right-4 text-white text-3xl font-bold"
+          >
+            ✕
+          </button>
+        </div>
+      )}
     </section>
   );
 };
