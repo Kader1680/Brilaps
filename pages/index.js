@@ -17,7 +17,7 @@ export default function Home() {
         <meta name='brilaps' content='brilaps company | brilaps' />
       </Head>
       <Hero />
-      <LogoGrid />
+      {/* <LogoGrid /> */}
       <GradientWrapper>
       <WorkShowcase />
       <Slider />
