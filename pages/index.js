@@ -8,17 +8,19 @@ import LogoGrid from "../components/ui/LogoGrid";
 import Testimonials from "../components/ui/Testimonials";
 import ToolKit from "../components/ui/ToolKit";
 import WorkShowcase from "../components/ui/examples/WorkShowcase";
+import Slider from "../components/ui/Slider";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <meta name='robots' content='index' />
+        <meta name='brilaps' content='brilaps company | brilaps' />
       </Head>
       <Hero />
       <LogoGrid />
       <GradientWrapper>
       <WorkShowcase />
+      <Slider />
         <Features />
         <CTA />
       </GradientWrapper>
