@@ -11,12 +11,15 @@ import WorkShowcase from "../components/ui/examples/WorkShowcase";
 import Slider from "../components/ui/Slider";
 
 export default function Home() {
+  
   return (
     <>
       <Head>
         <meta name='brilaps' content='brilaps company | brilaps' />
       </Head>
       <Hero />
+      <Oop />
+
       {/* <LogoGrid /> */}
       <GradientWrapper>
       <WorkShowcase />
